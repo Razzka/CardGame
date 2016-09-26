@@ -1,0 +1,107 @@
+ul[dnd-list] {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	min-height: 125px;
+	border-radius: 10px;
+}
+
+.dnd-list {
+	position: relative;
+    display: inline-block;
+    width: 100%;
+    min-height: 125px;
+}
+
+ul[dnd-list] > li {
+	position: relative;
+	display: inline-block;
+}
+
+ul.dnd-list > li {
+	position: relative;
+    display: inline-block;
+}
+
+ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+
+.minions > ul[dnd-list] .dndPlaceholder {
+    display: inline-block;
+    width: 100px;
+    height: 135px;
+    margin-right: 20px;
+    background-color: #ddd;
+    min-height: 42px;
+    border-radius: 70px / 100px
+}
+
+.player-hand > ul[dnd-list] .dndPlaceholder {
+	display: inline-block;
+    width: 100px;
+    height: 125px;
+    margin-right: 20px;
+    background-color: #ddd;
+    min-height: 42px;
+    border-radius: 10px;
+    top: -170px;
+}
+
+.player-hand > ul[dnd-list] {
+	height: 125px;
+}
+
+.player-hand > ul[dnd-list] > li {
+	height: 125px;
+}
+
+.search-results > ul[dnd-list] .dndPlaceholder {
+	height: 125px;
+	top: -170px;
+	border-radius: 10px;
+}
+
+.search-results > ul[dnd-list] .dndPlaceholder {
+    display: inline-block;
+    width: 100px;
+    height: 135px;
+    margin-right: 20px;
+    background-color: #ddd;
+    min-height: 42px;
+}
+
+.search-results > ul[dnd-list] {
+    height: 125px;
+}
+
+.search-results > ul[dnd-list] > li {
+    height: 125px;
+}
+
+.search-results > ul[dnd-list] .dndPlaceholder {
+    height: 125px;
+    top: -170px;
+    border-radius: 10px;
+}
+
+.weapon > .dndPlaceholder {
+    display: none;
+}
+
+/** можно добавить сюда типа крестика что-то в качестве маркера */
+.trash-drop-zone > .dndPlaceholder {
+    display: none;
+}
+
+.dndDragging {
+    opacity: 0.7;
+}
+
+.dragAllowed {
+	background: rgba(0, 255, 0, 0.5);
+}
+
+.dragDisabled {
+	background: rgba(0, 0, 0, 0.5);
+}

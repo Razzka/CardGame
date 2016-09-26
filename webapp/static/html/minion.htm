@@ -1,0 +1,20 @@
+<div class="minion">
+    <div ng-show="(m.effects || '').indexOf('divine') != -1" class="minion-divine"></div>
+	<div ng-class="{ greenBorder: !m.enemy && 
+	                             (m.effects || '').indexOf('frozen') == -1 && 
+	                             (m.effects || '').indexOf('sleep') == -1 }">
+		<div class="minion-circle"></div>
+		<div ng-show="(m.effects || '').indexOf('taunt') != -1" class="minion-taunt"></div>
+	    <div ng-show="(m.effects || '').indexOf('frozen') != -1" class="minion-frozen"></div>
+		<div ng-show="(m.effects || '').indexOf('stealth') != -1" class="minion-stealth"></div>
+		<div ng-show="!m.enemy && (m.effects || '').indexOf('sleep') != -1" class="minion-zzz">
+		   <div class="zzz-image"></div>
+		   <div class="zzz-image delay-1"></div>
+		   <div class="zzz-image delay-2"></div>
+		</div>
+		<div class="legendary-minion" ng-hide="m.card.rarity != 'Legendary'"></div>
+		<div class="minion-attack size-small belwe" ng-class="{buffed: m.attack > m.card.defaultAttack}">{{m.attack}}</div>
+		<div class="minion-hp size-small belwe" ng-class="{damaged: m.hp < m.card.defaultHp, buffed: m.hp > m.card.defaultHp}">{{m.hp}}</div>
+		<img ng-src="/Hearthpuzzle/resources/images/cards/{{m.card.id}}c.png" alt="minion" class="minion-image"></img>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<div class="card">
+	<img ng-show="c.card.type == 'Minion'"  src="/Hearthpuzzle/resources/images/cover/nuteral.png" class="card-cover"></img>
+	<img ng-src="/Hearthpuzzle/resources/images/cards/{{c.card.id}}.png" alt="card" class="card-image"></img>
+	<div ng-show="c.card.type == 'Minion'" class="card-attack size-big belwe" ng-class="{damaged: c.attack < c.card.defaultAttack, buffed: c.attack > c.card.defaultAttack}">{{c.attack}}</div>
+	<div ng-show="c.card.type == 'Minion'" class="card-hp size-big belwe" ng-class="{damaged: c.hp < c.card.defaultHp, buffed: c.hp > c.card.defaultHp}">{{c.hp}}</div>
+	<div class="card-cost size-big belwe" 
+	     ng-class="{cardCoverMana: c.card.type != 'Minion', damaged: c.cost > c.card.defaultCost, buffed: c.cost < c.card.defaultCost}">
+	     <div class="card-cost-value">{{c.cost}}</div>
+	</div>
+</div>

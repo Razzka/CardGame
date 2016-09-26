@@ -1,0 +1,10 @@
+<div class="weapon">
+	<img ng-show="!!w" ng-src="/Hearthpuzzle/resources/images/cards/{{w.card.id}}c.png" alt="weapon" class="weapon-image"></img>
+	<div ng-show="!!w" class="weapon-circle"></div>
+	<div ng-show="!!w" class="weapon-attack size-small belwe" ng-class="{damaged: w.attack < w.card.defaultAttack, buffed: w.attack > w.card.defaultAttack}">
+	   <div>{{w.attack}}</div>
+	</div>
+	<div ng-show="!!w" class="weapon-hp size-small belwe" ng-class="{damaged: w.hp < w.card.defaultHp, buffed: w.hp > w.card.defaultHp}">
+	   <div>{{w.hp}}</div>
+	</div>
+</div>

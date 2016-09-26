@@ -1,0 +1,12 @@
+<div class="hero-image-container" ng-class="{ greenBorder: h.attack > 0 }">
+	<div class="hero-armor size-small belwe" ng-hide="h.armor == 0">
+		<div class="hero-armor-text">{{h.armor}}</div>
+	</div>
+	<div class="hero-hp size-small belwe">
+		<div class="hero-hp-text" ng-class="{damaged: h.hp < h.hero.maxhp, buffed: h.hp > h.hero.maxhp}">{{h.hp}}</div>
+	</div>
+	<div class="hero-attack size-small belwe" ng-hide="h.attack == 0">
+		<div class="hero-attack-text">{{h.attack}}</div>
+	</div>
+	<img ng-src="/Hearthpuzzle/resources/images/classes/{{h.hero.name}}Hero.png" alt="hero" class="hero-image"></img>
+</div>

@@ -1,0 +1,7 @@
+<div class="heropower">
+	<img ng-src=/Hearthpuzzle/resources/images/cards/{{p.heropower.imageId}}c.png alt="heropower" class="heropower-image"></img>
+	<div class="heropower-circle"></div>
+	<div class="heropower-mana size-small belwe" ng-class="{damaged: p.heropowerCost > 2, buffed: p.heropowerCost < 2}">
+	   <div class="heropower-mana-text">{{p.heropowerCost}}</div>
+	</div>
+</div>
